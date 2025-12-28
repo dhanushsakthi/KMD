@@ -1,115 +1,191 @@
-// src/components/ProductCard.jsx
 import React from 'react';
+import { Star, Truck, Package, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { Star, ShoppingBag, Heart, Zap, Leaf } from 'lucide-react';
-import { motion } from 'framer-motion';
 
 const ProductCard = ({ product }) => {
+  // Color assignment based on category
+  const getColorClass = (category) => {
+    switch(category) {
+      case 'Malt Products':
+        return {
+          bg: 'bg-gradient-to-br from-blue-50 to-blue-100',
+          border: 'border-blue-200',
+          text: 'text-blue-600',
+          iconBg: 'bg-blue-100'
+        };
+      case 'Flour Mixes':
+        return {
+          bg: 'bg-gradient-to-br from-red-50 to-red-100',
+          border: 'border-red-200',
+          text: 'text-red-600',
+          iconBg: 'bg-red-100'
+        };
+      case 'Porridge Mixes':
+        return {
+          bg: 'bg-gradient-to-br from-yellow-50 to-yellow-100',
+          border: 'border-yellow-200',
+          text: 'text-yellow-600',
+          iconBg: 'bg-yellow-100'
+        };
+      default:
+        return {
+          bg: 'bg-gradient-to-br from-green-50 to-green-100',
+          border: 'border-green-200',
+          text: 'text-green-600',
+          iconBg: 'bg-green-100'
+        };
+    }
+  };
+
+  const colorClass = getColorClass(product.category);
+
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      whileHover={{ y: -5 }}
-      className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100"
-    >
+    <div className="group bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+      
       {/* Product Image */}
       <Link to={`/product/${product.id}`}>
-        <div className="relative h-64 overflow-hidden bg-gradient-to-br from-amber-50 to-emerald-50">
-          {/* Image Placeholder */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-48 h-48 rounded-full bg-gradient-to-br from-amber-100 to-emerald-100 flex items-center justify-center">
-              <div className="text-5xl">
-                {product.category === 'Malts' ? '🌾' :
-                  product.category === 'Flour Mixes' ? '🥣' :
-                    product.category === 'Ready Mixes' ? '⚡' :
-                      product.category === 'Fruit Powders' ? '🍌' : '🥘'}
+        <div className="relative overflow-hidden cursor-pointer">
+          <div className={`aspect-square ${colorClass.bg} ${colorClass.border} flex items-center justify-center p-4 relative`}>
+            {/* Show actual product image if available, otherwise show icon */}
+            {product.image ? (
+              <img 
+                src={product.image} 
+                alt={product.name}
+                className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+              />
+            ) : (
+              <div className={`text-6xl group-hover:scale-110 transition-transform duration-300 ${colorClass.iconBg} p-6 rounded-2xl`}>
+                {product.icon}
+              </div>
+            )}
+            
+            {/* KMD Logo Watermark */}
+            <div className="absolute inset-0 flex items-center justify-center opacity-10">
+              <div className="text-3xl font-bold">
+                <span className="text-blue-600">K</span>
+                <span className="text-red-600">M</span>
+                <span className="text-yellow-600">D</span>
               </div>
             </div>
           </div>
-
-          {/* Tags */}
-          {product.tag && (
-            <div className="absolute top-4 left-4">
-              <span className={`px-3 py-1.5 rounded-full text-xs font-bold ${product.tag === 'Best Seller'
-                  ? 'bg-gradient-to-r from-amber-500 to-amber-600 text-white'
-                  : product.tag === 'Premium'
-                    ? 'bg-gradient-to-r from-emerald-500 to-emerald-600 text-white'
-                    : product.tag === 'Popular'
-                      ? 'bg-gradient-to-r from-blue-500 to-blue-600 text-white'
-                      : 'bg-gradient-to-r from-purple-500 to-purple-600 text-white'
-                } shadow-lg`}>
-                {product.tag}
+          
+          {/* Category & Tags */}
+          <div className="absolute top-3 left-3 right-3 flex justify-between">
+            <div className="bg-white px-3 py-1.5 rounded-lg shadow-sm">
+              <span className={`text-xs font-bold ${colorClass.text}`}>
+                {product.category}
               </span>
             </div>
-          )}
-
-          {/* Wishlist Button */}
-          <button className="absolute top-4 right-4 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition-colors shadow-lg">
-            <Heart className="w-5 h-5 text-gray-600 hover:text-rose-500 transition-colors" />
-          </button>
-
-          {/* Quick View Overlay */}
-          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
-            <span className="bg-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
-              Quick View
-            </span>
+            
+            {product.tag && (
+              <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-3 py-1.5 rounded-lg shadow-sm">
+                <span className="text-xs font-bold">{product.tag}</span>
+              </div>
+            )}
+          </div>
+          
+          {/* Shelf Life Badge */}
+          <div className="absolute bottom-3 right-3">
+            <div className="bg-white px-3 py-1.5 rounded-lg shadow-sm flex items-center">
+              <Clock className="w-3 h-3 mr-1 text-gray-600" />
+              <span className="text-xs font-medium text-gray-700">{product.shelfLife}</span>
+            </div>
           </div>
         </div>
       </Link>
-
+      
       {/* Product Info */}
       <div className="p-6">
-        <div className="flex items-center justify-between mb-3">
-          <span className="text-xs font-semibold text-emerald-700 bg-emerald-50 px-3 py-1.5 rounded-full">
-            {product.category}
-          </span>
-          <div className="flex items-center">
-            <Star className="w-4 h-4 text-amber-500 fill-amber-500" />
-            <span className="ml-1.5 text-sm font-semibold text-gray-900">{product.rating}</span>
+        {/* Product Name with KMD Logo */}
+        <Link to={`/product/${product.id}`} className="block">
+          <div className="flex items-center justify-between mb-3">
+            <h3 className="text-lg font-bold text-gray-900 line-clamp-1 hover:text-blue-600 transition-colors">
+              {product.name}
+            </h3>
+            <div className="text-xs font-bold">
+              <span className="text-blue-600">K</span>
+              <span className="text-red-600">M</span>
+              <span className="text-yellow-600">D</span>
+            </div>
           </div>
-        </div>
-
-        <Link to={`/product/${product.id}`}>
-          <h3 className="text-xl font-display font-bold text-gray-900 mb-2 group-hover:text-amber-700 transition-colors line-clamp-1">
-            {product.name}
-          </h3>
         </Link>
-
-        <p className="text-gray-600 text-sm mb-4 line-clamp-2 min-h-[40px]">
-          {product.description || product.shortDesc || ''}
+        
+        {/* Description */}
+        <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+          {product.description}
         </p>
-
-        {/* Benefits */}
-        {product.benefits && product.benefits.length > 0 && (
-          <div className="flex flex-wrap gap-2 mb-4">
-            {product.benefits.slice(0, 2).map((benefit, index) => (
-              <span key={index} className="text-xs font-medium text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">
-                {benefit}
-              </span>
+        
+        {/* Rating */}
+        <div className="flex items-center mb-4">
+          <div className="flex">
+            {[1, 2, 3, 4, 5].map((star) => (
+              <Star
+                key={star}
+                className={`w-4 h-4 ${star <= product.rating ? 'fill-yellow-400 text-yellow-400' : 'fill-gray-200 text-gray-200'}`}
+              />
             ))}
           </div>
-        )}
-
-        {/* Price & Weight */}
+          <span className="text-sm text-gray-600 ml-2">
+            {product.rating} (Export Quality)
+          </span>
+        </div>
+        
+        {/* Price & Shelf Life */}
         <div className="flex items-center justify-between mb-6">
           <div>
-            <span className="text-2xl font-bold text-gray-900">{product.price}</span>
-            {product.originalPrice && (
-              <span className="ml-2 text-sm text-gray-500 line-through">
-                {product.originalPrice}
-              </span>
-            )}
+            <div className="text-2xl font-bold text-gray-900">{product.price}</div>
+            <div className="text-sm text-gray-500">Export price</div>
           </div>
-          <span className="text-sm font-medium text-gray-500">{product.weight}</span>
+          <div className="text-right">
+            <div className="text-sm font-medium text-gray-700">Shelf Life</div>
+            <div className="text-sm text-gray-600">{product.shelfLife}</div>
+          </div>
         </div>
-
-        {/* Add to Cart Button */}
-        <button className="w-full bg-gradient-to-r from-amber-500 to-amber-600 text-white font-semibold py-3.5 rounded-xl hover:from-amber-600 hover:to-amber-700 transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-2">
-          <ShoppingBag className="w-5 h-5" />
-          Add to Cart
-        </button>
+        
+        {/* CTA Button */}
+        <Link to={`/product/${product.id}`}>
+          <button className="w-full py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-medium rounded-lg hover:shadow-md transition-all mb-4">
+            View Details
+          </button>
+        </Link>
+        
+        {/* Export Info with KMD Logo */}
+        <div className="pt-4 border-t border-gray-100">
+          <div className="flex items-center justify-between text-sm">
+            <div className="flex items-center">
+              <div className="text-xs font-bold mr-2">
+                <span className="text-blue-600">K</span>
+                <span className="text-red-600">M</span>
+                <span className="text-yellow-600">D</span>
+              </div>
+              <span className="text-gray-600">Available for export</span>
+            </div>
+            <div className="flex items-center">
+              <Package className="w-3 h-3 mr-1 text-gray-500" />
+              <span className={`font-medium ${colorClass.text}`}>
+                MOQ: {product.moq}
+              </span>
+            </div>
+          </div>
+        </div>
+        
+        {/* Quick Benefits */}
+        {product.benefits && (
+          <div className="mt-4 pt-4 border-t border-gray-100">
+            <div className="flex flex-wrap gap-2">
+              {product.benefits.slice(0, 2).map((benefit, index) => (
+                <span
+                  key={index}
+                  className="text-xs px-2 py-1 bg-gray-100 text-gray-700 rounded"
+                >
+                  {benefit}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
-    </motion.div>
+    </div>
   );
 };
 
