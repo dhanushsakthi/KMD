@@ -1,10 +1,29 @@
-// src/components/Hero.jsx
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Shield, Globe, Truck, Award, CheckCircle } from "lucide-react";
 import heroBackground from "../assets/image.jpg";
+import image2 from "../assets/image2.jpg";
+import image3 from "../assets/image3.jpg";
+import image4 from "../assets/image4.jpg";
 
 const Hero = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const slides = [
+    { type: "image", src: heroBackground },
+    { type: "color", src: "#ffffff" }, // Second slide is white color
+    { type: "image", src: image2 },
+    { type: "image", src: image3 },
+    { type: "image", src: image4 },
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   const features = [
     { icon: <Shield className="w-5 h-5" />, label: "Premium Quality" },
     { icon: <Globe className="w-5 h-5" />, label: "Global Export" },
@@ -15,11 +34,18 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
 
-      {/* Background */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroBackground})` }}
-      />
+      {/* Background Slideshow */}
+      {slides.map((slide, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out ${currentSlide === index ? "opacity-100" : "opacity-0"
+            }`}
+          style={{
+            backgroundImage: slide.type === "image" ? `url(${slide.src})` : "none",
+            backgroundColor: slide.type === "color" ? slide.src : "transparent",
+          }}
+        />
+      ))}
 
       {/* Deep Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/70 to-black/40" />
@@ -28,7 +54,7 @@ const Hero = () => {
       <div
         className="absolute inset-0 opacity-[0.15]"
         style={{
-          backgroundImage:`url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 39h40v1H0z' fill='%23ffffff'/%3E%3C/svg%3E")`
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 39h40v1H0z' fill='%23ffffff'/%3E%3C/svg%3E")`
         }}
       />
 
