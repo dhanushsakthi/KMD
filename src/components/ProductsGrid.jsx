@@ -158,13 +158,6 @@ const ProductsGrid = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-6 bg-white rounded-xl border border-gray-100">
-              <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg mb-6">
-                <Globe className="w-7 h-7 text-white" />
-              </div>
-              <h4 className="text-lg font-bold text-gray-900 mb-3">Global Network</h4>
-              <p className="text-gray-600">Exporting to 50+ countries with reliable logistics</p>
-            </div>
             
             <div className="text-center p-6 bg-white rounded-xl border border-gray-100">
               <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-red-500 to-red-600 rounded-lg mb-6">
@@ -219,10 +212,6 @@ const ProductsGrid = () => {
 
         {/* Call to Action */}
         <div className="text-center">
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-50 to-blue-100 px-4 py-2 rounded-full mb-6">
-            <FileText className="w-5 h-5 text-blue-600" />
-            <span className="text-sm font-medium text-blue-700">EXPORT READY</span>
-          </div>
           <h3 className="text-2xl font-bold text-gray-900 mb-4">
             Ready to Export Our Premium Products?
           </h3>

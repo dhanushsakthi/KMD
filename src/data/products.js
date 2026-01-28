@@ -1,11 +1,11 @@
 import image1 from '../assets/image1.jpg';
 import image2 from '../assets/image2.jpg';
-import image3 from '../assets/image3.jpg';  
+import image3 from '../assets/image3.jpg';
 import image4 from '../assets/image4.jpg';
 import image5 from '../assets/image5.jpg';
 import image6 from '../assets/image6.jpg';
 import image7 from '../assets/image7.jpg';
-import image8 from '../assets/image8.jpg';  
+import image8 from '../assets/image8.jpg';
 import image9 from '../assets/image9.jpg';
 import image10 from '../assets/image10.jpg';
 import image11 from '../assets/image11.jpg';
@@ -16,202 +16,261 @@ export const products = [
   {
     id: 1,
     name: "ABC MALT",
-    description: "Nutritious ABC malt powder with essential vitamins and minerals",
-    price: "₹750",
+    weight: "250 g",
+    mrp: "₹310",
+    retailPrice: "₹240",
+    gst: "5%",
     category: "Malt Products",
     rating: 4.9,
     shelfLife: "6 months",
-    image: image1, // FIXED: removed curly braces
+    image: image1,
     icon: "🥛",
     featured: true,
     tag: "Premium",
-    benefits: ["Rich in nutrients", "Boosts energy", "Easy to digest"],
-    moq: "100 units"
+    description: "ABC Malt is a health drink mix made from a blend of Apple, Beetroot, and Carrot, often with added ingredients like almonds, cashews, and jaggery. It's known for its nutritional value, providing vitamins, minerals, and antioxidants, and is typically enjoyed as a beverage mixed with milk or water. Our brand emphasizes its natural ingredients, no preservatives, and potential health benefits like improved digestion and immunity.",
+    benefits: ["Supports immunity", "Rich in nutrients", "Natural sweetness", "No preservatives"],
+    moq: "100 units",
+    ingredients: "Apple, Beetroot, Carrot, Country Sugar, Badam, Cashew and Cardamom.",
+    directions: "Add 2tsp ABC Malt to 1 glass of hot milk, Mix well and serve, No need to add white sugar."
   },
   {
     id: 2,
     name: "BEETROOT MALT",
-    description: "Healthy beetroot malt powder rich in iron and antioxidants",
-    price: "₹575",
+    weight: "250 g",
+    mrp: "₹210",
+    retailPrice: "₹175",
+    gst: "5%",
     category: "Malt Products",
     rating: 4.8,
-    shelfLife: "4 months",
-    image: image2, // FIXED: removed curly braces
-    icon: "🫐",
+    shelfLife: "6 months",
+    image: image2,
+    icon: "🍠",
     featured: true,
     tag: "Best Seller",
-    benefits: ["High in iron", "Antioxidant rich", "Supports blood health"],
-    moq: "100 units"
+    description: "Beetroot Malt is a nutritious and delicious health drink made from dried beetroot powder, often blended with other natural ingredients like dry fruits and jaggery. It's known for its vibrant color and earthy flavor, offering a range of health benefits due to its rich vitamin, mineral, and antioxidant content. Beetroot malt can be enjoyed as a hot or cold beverage, added to smoothies, or used in culinary creations.",
+    benefits: ["Antioxidant rich", "Supports blood health", "Energy booster", "Natural ingredients"],
+    moq: "100 units",
+    ingredients: "Beetroot, Country Sugar, Badam, Cashew and Cardamom",
+    directions: "Add 2tsp beetroot malt to 1 glass of hot milk, mix well and serve, no need to add white sugar."
   },
   {
     id: 3,
     name: "SPROUTED RAGI MALT",
-    description: "Sprouted ragi malt powder with enhanced nutritional value",
-    price: "₹410",
+    weight: "250 g",
+    mrp: "₹175",
+    retailPrice: "₹130",
+    gst: "5%",
     category: "Malt Products",
     rating: 4.7,
-    shelfLife: "4 months",
-    image: image3, // FIXED: removed curly braces
+    shelfLife: "6 months",
+    image: image3,
     icon: "🌾",
-    featured: true,
-    tag: "Popular",
-    benefits: ["High in calcium", "Rich in fiber", "Gluten-free"],
-    moq: "150 units"
+    description: "Sprouted Ragi Malt is a traditional and versatile preparation that harnesses the nutritional benefits of ragi in a delicious and easily digestible form. Packed with vitamins, minerals, and fiber, ragi malt makes for a perfect addition to your daily diet. Sprouted Ragi malt fortified with milk solids, badam and cardamom. Highly nutritious and easy to digest.",
+    benefits: ["High calcium", "Rich fiber", "Healthy metabolism", "Easily digestible"],
+    moq: "100 units",
+    ingredients: "Sprouted Ragi, Milk Solids, Rock Candy, Badam, Cocoa Powder [Optional], Cardamom",
+    directions: "Add 2tsp of Ragi malt to 1 glass of hot milk, mix well and serve."
   },
   {
     id: 4,
     name: "MALT O POWER",
-    description: "Power-packed malt with multiple grain nutrition",
-    price: "₹410",
+    weight: "250 g",
+    mrp: "₹175",
+    retailPrice: "₹130",
+    gst: "5%",
     category: "Malt Products",
     rating: 4.6,
-    shelfLife: "4 months",
-    image: image4, // FIXED: removed curly braces
+    shelfLife: "6 months",
+    image: image4,
     icon: "⚡",
-    benefits: ["Energy booster", "Multi-grain", "Complete nutrition"],
-    moq: "150 units"
+    description: "Malt-O-Power is a brand of malted drink mix, often described as a nutritional supplement and energy booster, particularly popular in India. It typically comes in a powdered form, meant to be mixed with hot milk or water. The product is known for its natural ingredients, No preservatives, and artificial colors or flavors.",
+    benefits: ["Energy booster", "Nutritious blend", "Supports growth", "No artificial colors"],
+    moq: "100 units",
+    ingredients: "Sprouted Wheat, Milk Solids, Rock Candy, Badam, Cocoa Powder [option] and Cardamom.",
+    directions: "Add 2tsp Malt O Power to 1 glass of hot milk, mix well and serve."
   },
   {
     id: 5,
     name: "MILLET FLOUR MIX",
-    description: "Healthy millet flour mix for traditional recipes",
-    price: "₹275",
+    weight: "500 g",
+    mrp: "₹200",
+    retailPrice: "₹130",
+    gst: "5%",
     category: "Flour Mixes",
-    rating: 4.7,
-    shelfLife: "4 months",
-    image: image5, // FIXED: removed curly braces
+    rating: 4.8,
+    shelfLife: "6 months",
+    image: image5,
     icon: "🌾",
-    benefits: ["Gluten-free", "High protein", "Traditional recipe"],
-    moq: "200 units"
+    description: "Millet Flour Mix is a convenient blend of various millets, often combined with lentils like urad dal, and sometimes rice, used to make soft and fluffy Idlis, Dosa and Paniyaram. These mixes offer a healthier alternative to traditional rice-based idlis, being rich in fiber, protein, and other essential nutrients. They are also naturally gluten-free and can be a good option for those seeking to reduce their carbohydrate intake.",
+    benefits: ["Gluten-free", "High fiber", "Protein rich", "Healthy alternative"],
+    moq: "200 units",
+    ingredients: "Finger Millet, Pearl Millet, Red Rice, Raw Rice, Flattened Rice, Urad Dal, Fenureek Seeds.",
+    directions: "Take 2 cups of millets flour add water and rock salt, mix without crumbs. Fermentation 10-12 hours then make Idly, Dosa, Paniyaram whatever likes. FERMENTATION MANDATORY"
   },
   {
     id: 6,
     name: "MULTI MILLET ADAI MIX",
-    description: "Ready-to-make multi millet adai mix",
-    price: "₹310",
+    weight: "250 g",
+    mrp: "₹120",
+    retailPrice: "₹90",
+    gst: "5%",
     category: "Flour Mixes",
-    rating: 4.8,
-    shelfLife: "4 months",
-    image: image6, // FIXED: removed curly braces
+    rating: 4.7,
+    shelfLife: "6 months",
+    image: image6,
     icon: "🥞",
-    featured: true,
-    tag: "Traditional",
-    benefits: ["Ready to cook", "Multi-millet", "Protein rich"],
-    moq: "150 units"
+    description: "A Multi Millet Adai Mix is a pre-mixed blend of various millets and lentils, designed for convenient preparation of Adai, a protein-rich, savory South Indian pancake. Key ingredients include high-fiber millets like Finger Millet, Barnyard millet, Pearl Millet and Red Cholam combined with lentils such as Toor dal. This mix provides a healthy, easy-to-cook alternative to traditional rice-based meals, offering a good source of protein, fiber, vitamins, and minerals, and is ideal for diabetic and health-conscious diets.",
+    benefits: ["High protein", "Diabetic friendly", "Traditional taste", "Rich in fiber"],
+    moq: "150 units",
+    ingredients: "Barnyard Millet, Finger Millet, Pearl Millet, Red Cholam, Toor Dhal, Idli Rice, Chilli Powder, Cumin Seeds, Asafetida, Curry leaves, Salt and Citric Acid.",
+    directions: "Take 1 cup of adai mix, Add 2 cups of water and mix without crumbs. Add onion, curry leaves, coriander, ginger, and salt as per your taste. After one hour make Adai."
   },
   {
     id: 7,
     name: "MULTI MILLET PANIYARAM MIX",
-    description: "Instant multi millet paniyaram mix",
-    price: "₹270",
+    weight: "250 g",
+    mrp: "₹120",
+    retailPrice: "₹80",
+    gst: "5%",
     category: "Flour Mixes",
     rating: 4.6,
-    shelfLife: "4 months",
-    image: image7, // FIXED: removed curly braces
+    shelfLife: "6 months",
+    image: image7,
     icon: "🍘",
-    benefits: ["Instant mix", "Healthy snack", "Kids friendly"],
-    moq: "150 units"
+    description: "Multi-Millet Paniyaram Mix is a ready-to-cook breakfast or snack mix made from a blend of various millets, offering a convenient and nutritious alternative to traditional Paniyaram. These mixes are typically gluten-free, high in fiber, and rich in essential nutrients, making them a healthy choice for various dietary needs. They are designed for easy preparation, requiring only the addition of water and sometimes a few simple seasonings, followed by cooking in a Paniyaram pan.",
+    benefits: ["Convenient", "Healthy snack", "Rich fiber", "Gluten-free"],
+    moq: "150 units",
+    ingredients: "Finger Millet, Pearl Millet, White Cholam, Idli Rice, Raw Rice, Urad Dal, Salt, Baking Soda, Yeast.",
+    directions: "Take 1 cup of paniyaram mix, Add 2 cups of water and mix without crumbs, Add onion, curry leaves, coriander, carrot, ginger and salt as per your taste. After 2 hours make paniyaram."
   },
   {
     id: 8,
     name: "KARUPPU KAVUNI KANJI MIX",
-    description: "Traditional black rice kanji mix",
-    price: "₹475",
-    category: "Specialty Mixes",
+    weight: "250 g",
+    mrp: "₹210",
+    retailPrice: "₹150",
+    gst: "5%",
+    category: "Porridge Mixes",
     rating: 4.9,
-    shelfLife: "4 months",
-    image: image8, // FIXED: removed curly braces
+    shelfLife: "6 months",
+    image: image8,
     icon: "🍚",
     featured: true,
     tag: "Traditional",
-    benefits: ["Antioxidant rich", "Traditional recipe", "Healthy porridge"],
-    moq: "100 units"
+    description: "Karuppu Kavuni Kanji Mix is a traditional South Indian porridge mix made from black rice, known for its rich nutritional profile and health benefits. It's a convenient way to prepare a nutritious breakfast or snack, packed with antioxidants, fiber, and iron.",
+    benefits: ["Antioxidant rich", "Supports digestion", "Iron source", "Traditional recipe"],
+    moq: "100 units",
+    ingredients: "Karuppu Kavuni Rice, Moong Dal, Horse Gram, Barley, Pepper, Cumin and Rock Salt.",
+    directions: "Mix 1 spoon of Karuppu Kavuni Kanji Mix into 100ml of water and whisk until smooth free from lumps. Cook the mixture on medium heat for 10 to 12 mins or until it is thick and ready to serve hot."
   },
   {
     id: 9,
-    name: "RAGI PORRIDGE",
-    description: "Instant ragi porridge mix",
-    price: "₹310",
-    category: "Porridge Mixes",
-    rating: 4.7,
-    shelfLife: "4 months",
-    image: image9, // FIXED: removed curly braces
-    icon: "🥣",
-    benefits: ["Instant porridge", "High in calcium", "Easy to prepare"],
-    moq: "150 units"
+    name: "MORINGA DHAL POWDER",
+    weight: "250 g",
+    mrp: "₹150",
+    retailPrice: "₹110",
+    gst: "5%",
+    category: "Powder Mixes",
+    rating: 4.8,
+    shelfLife: "8 months",
+    image: image10,
+    icon: "🌿",
+    description: "Moringa Dhal Powder is a nutritious blend of roasted lentils and dried moringa leaves, often enhanced with spices. It's a convenient way to incorporate the health benefits of moringa, a nutrient-rich superfood, into everyday meals. The powder is typically used as a seasoning or added to Rice, Idli, and Dosa.",
+    benefits: ["Rich minerals", "Boosts immunity", "Healthy side dish", "Superfood blend"],
+    moq: "150 units",
+    ingredients: "Chana Dal, Urad Dal, Toor Dal, Red Chilly, Garlic, Pepper, Cumin Seeds, Tamarind, Coriander Seeds, Moringa Leaf, Curry Leaf, Asafetida, Rock Salt.",
+    directions: "Best side dish for Idly, Dosa and also mix with boiled rice and serve."
   },
   {
     id: 10,
-    name: "MORINGA DHAL POWDER",
-    description: "Nutrient-rich moringa dhal powder",
-    price: "₹370",
-    category: "Powder Mixes",
-    rating: 4.8,
-    shelfLife: "4 months",
-    image: image10, // FIXED: removed curly braces
-    icon: "🌿",
-    benefits: ["Rich in vitamins", "Iron source", "Protein packed"],
-    moq: "150 units"
+    name: "MULTI DHAL ADAI MIX",
+    weight: "250 g",
+    mrp: "₹150",
+    retailPrice: "₹110",
+    gst: "5%",
+    category: "Flour Mixes",
+    rating: 4.7,
+    shelfLife: "6 months",
+    image: image12,
+    icon: "🥘",
+    description: "Adai is a traditional south Indian breakfast with rice, lentils and dry red chillies as main ingredients. Rich in protein. Traditional South Indian Adai mix made using multiple protein-rich lentils.",
+    benefits: ["High protein", "Crunchy texture", "Healthy breakfast", "Traditional recipe"],
+    moq: "150 units",
+    ingredients: "Chana Dal, Toor Dal, Moong Dal, Urad Dal, Idly Rice, Raw Rice, Red Chilli, Curry leaves, Fennel, Dry Ginger, Rock Salt",
+    directions: "Add 200ml of water to the KMD Adai mix thoroughly, add chopped onion as per your taste, grease the tawa and spread the batter smoothly. Pour little ghee or oil over the adai, now the crunchy, tasty KMD Foods adai is ready."
   },
   {
     id: 11,
     name: "WHEAT DOSA FLOUR MIX",
-    description: "Healthy wheat dosa flour mix",
-    price: "₹280",
+    weight: "250 g",
+    mrp: "₹120",
+    retailPrice: "₹80",
+    gst: "5%",
     category: "Flour Mixes",
     rating: 4.6,
-    shelfLife: "4 months",
-    image: image11, // FIXED: removed curly braces
+    shelfLife: "6 months",
+    image: image11,
     icon: "🫓",
-    benefits: ["Wheat based", "Easy to make", "Healthy breakfast"],
-    moq: "200 units"
+    description: "Wheat Dosa Flour Mix is made from high-quality sprouted wheat, free from artificial flavors and preservatives. Offers potential for improved digestion, sustained energy, and overall wellness. A natural and healthy alternative for various culinary uses.",
+    benefits: ["Improves digestion", "Natural energy", "No preservatives", "Sustained energy"],
+    moq: "200 units",
+    ingredients: "Sprouted Wheat, Black Urad Dal, Chana Dal, Flattened Rice, Salt.",
+    directions: "Take one cup of wheat dosa mix. Add required water and salt, mix well without crumbs. Fermentation 4 to 6 hours (MANDATORY). After fermentation make dosa."
   },
   {
     id: 12,
-    name: "MULTI DHAL ADAI MIX",
-    description: "Multi dhal adai mix with protein richness",
-    price: "₹370",
-    category: "Flour Mixes",
+    name: "RAGI PORRIDGE",
+    weight: "250 g",
+    mrp: "₹140",
+    retailPrice: "₹100",
+    gst: "5%",
+    category: "Porridge Mixes",
     rating: 4.7,
-    shelfLife: "4 months",
-    image: image12, // FIXED: removed curly braces
-    icon: "🥘",
-    benefits: ["Multi dhal", "High protein", "Traditional taste"],
-    moq: "150 units"
+    shelfLife: "6 months",
+    image: image9,
+    icon: "🥣",
+    description: "Ragi porridge, also known as ragi malt or ragi java, is a nutritious breakfast drink made from finger millet flour, water, and a sweetener like jaggery or sugar. It's a popular choice in South India and is known for its health benefits, including being rich in calcium, iron, and fiber. It can be customized with nuts, dry fruits, and flavorings, and can be enjoyed hot, warm, or at room temperature.",
+    benefits: ["High calcium", "Gut friendly", "Great for kids & elders", "Iron rich"],
+    moq: "150 units",
+    ingredients: "Sprouted Ragi, Red Rice, Badam, Pepper, Cumin Seeds, Rock Salt.",
+    directions: "Mix 2 tsp of Ragi porridge to plain water. Boil 200ml of water and add the mixed ragi porridge. Heat 10-15 mins in low flame. Add required amount of salt and serve."
   },
-  {
+    {
     id: 13,
-    name: "RED BANANA POWDER",
-    description: "Premium red banana powder",
-    price: "₹850",
-    category: "Specialty Products",
+    name: "Red Banana Powder",
+    weight: "250 g",
+    mrp: "₹310",
+    retailPrice: "₹260",
+    gst: "5%",
+    category: "Malt Products",
     rating: 4.9,
-    shelfLife: "9 months",
-    image: image13, // FIXED: removed curly braces
-    icon: "🍌",
+    shelfLife: "6 months",
+    image: image13,
+    icon: "🥛",
     featured: true,
     tag: "Premium",
-    benefits: ["Rich in potassium", "Natural sweetness", "Long shelf life"],
-    moq: "50 units"
-  }
+    description: "Red banana powder is a nutrient-rich powder made from dried and ground red bananas (Musa acuminata), offering a concentrated source of vitamins A, C, and B6, essential minerals like potassium, magnesium, and iron, plus antioxidants and dietary fiber. It is a versatile food ingredient used in smoothies, porridges, baby food, and baked goods, supporting energy levels, digestion, immunity, and eye health. ",
+    benefits: ["Supports immunity", "Rich in nutrients", "Natural sweetness", "No preservatives"],
+    moq: "100 units",
+    ingredients: "Red Banana.",
+    directions: "Add 2tsp ABC Malt to 1 glass of hot milk, Mix well and serve, No need to add white sugar."
+  },
 ];
 
 export const categories = [
-  { name: "All Products", count: 13 },
+  { name: "All Products", count: 12 },
   { name: "Malt Products", count: 4 },
   { name: "Flour Mixes", count: 5 },
-  { name: "Porridge Mixes", count: 1 },
-  { name: "Powder Mixes", count: 1 },
-  { name: "Specialty Mixes", count: 1 },
-  { name: "Specialty Products", count: 1 }
+  { name: "Porridge Mixes", count: 2 },
+  { name: "Powder Mixes", count: 1 }
 ];
 
 export const healthBenefits = [
   "Rich in natural nutrients",
   "Boosts energy and immunity",
   "Supports healthy digestion",
-  "Gluten-free options available",
-  "Traditional recipes",
-  "Easy to prepare",
-  "Premium quality ingredients"
+  "Gluten-free and millet-based options",
+  "Traditional Indian recipes",
+  "No artificial colors or preservatives",
+  "Easy to prepare and family friendly"
 ];

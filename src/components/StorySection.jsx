@@ -25,36 +25,21 @@ const StorySection = () => {
           <div>
             <div className="mb-10">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Exporting Indian Goodness Since 1998
+                Exporting Indian Goodness
               </h3>
               <div className="space-y-6">
-                <p className="text-gray-700 leading-relaxed">
-                  Founded in 1998, KMD Foods has been at the forefront of exporting authentic 
-                  Indian food products to the world. What started as a small family business 
-                  has grown into a trusted name in global food exports.
-                </p>
-                <p className="text-gray-700 leading-relaxed">
-                  Our journey began with a simple vision: to share the rich flavors and 
-                  traditional recipes of India with the world. Today, we export premium quality 
-                  products to over 50 countries, maintaining the highest standards of quality 
-                  and authenticity.
-                </p>
-                <p className="text-gray-700 leading-relaxed">
-                  Every product that bears the KMD name undergoes rigorous quality checks 
-                  and is crafted using traditional methods combined with modern technology.
-                </p>
-              </div>
-            </div>
-            
-            {/* Company Stats */}
-            <div className="grid grid-cols-2 gap-6">
-              <div className="bg-white p-6 rounded-xl border border-gray-200">
-                <div className="text-3xl font-bold text-blue-600 mb-2">25+</div>
-                <div className="text-gray-700 font-medium">Years Experience</div>
-              </div>
-              <div className="bg-white p-6 rounded-xl border border-gray-200">
-                <div className="text-3xl font-bold text-red-600 mb-2">50+</div>
-                <div className="text-gray-700 font-medium">Countries</div>
+                <p class="text-gray-700 leading-relaxed">
+  KMD Foods began as a small family-run initiative with a passion for bringing authentic Indian flavors to customers while preserving traditional values and quality craftsmanship.
+</p>
+
+<p class="text-gray-700 leading-relaxed">
+  Over time, the brand has grown through dedication, trust, and consistency, remaining focused on offering thoughtfully prepared products made with care and responsibility.
+</p>
+
+<p class="text-gray-700 leading-relaxed">
+  Every product is crafted using time-honored methods supported by modern technology, undergoing strict quality checks to ensure freshness, purity, and authenticity in every batch.
+</p>
+
               </div>
             </div>
           </div>

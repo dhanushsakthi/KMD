@@ -132,10 +132,6 @@ const ProductCard = ({ product }) => {
         
         {/* Price & Shelf Life */}
         <div className="flex items-center justify-between mb-6">
-          <div>
-            <div className="text-2xl font-bold text-gray-900">{product.price}</div>
-            <div className="text-sm text-gray-500">Export price</div>
-          </div>
           <div className="text-right">
             <div className="text-sm font-medium text-gray-700">Shelf Life</div>
             <div className="text-sm text-gray-600">{product.shelfLife}</div>
@@ -158,13 +154,9 @@ const ProductCard = ({ product }) => {
                 <span className="text-red-600">M</span>
                 <span className="text-yellow-600">D</span>
               </div>
-              <span className="text-gray-600">Available for export</span>
             </div>
             <div className="flex items-center">
               <Package className="w-3 h-3 mr-1 text-gray-500" />
-              <span className={`font-medium ${colorClass.text}`}>
-                MOQ: {product.moq}
-              </span>
             </div>
           </div>
         </div>
