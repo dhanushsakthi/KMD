@@ -11,6 +11,8 @@ import image10 from '../assets/image10.jpg';
 import image11 from '../assets/image11.jpg';
 import image12 from '../assets/image12.jpg';
 import image13 from '../assets/image13.jpg';
+import image14 from '../assets/image14.png';
+import image15 from '../assets/image15.png';
 
 export const products = [
   {
@@ -235,7 +237,7 @@ export const products = [
     ingredients: "Sprouted Ragi, Red Rice, Badam, Pepper, Cumin Seeds, Rock Salt.",
     directions: "Mix 2 tsp of Ragi porridge to plain water. Boil 200ml of water and add the mixed ragi porridge. Heat 10-15 mins in low flame. Add required amount of salt and serve."
   },
-    {
+  {
     id: 13,
     name: "Red Banana Powder",
     weight: "250 g",
@@ -255,13 +257,49 @@ export const products = [
     ingredients: "Red Banana.",
     directions: "Add 2tsp ABC Malt to 1 glass of hot milk, Mix well and serve, No need to add white sugar."
   },
+  {
+    id: 14,
+    name: "BLACK URAD DHAL PUDDING",
+    weight: "250 g",
+    mrp: "₹180",
+    retailPrice: "₹150",
+    gst: "5%",
+    category: "Porridge Mixes",
+    rating: 4.8,
+    shelfLife: "6 months",
+    image: image14,
+    icon: "🥣",
+    description: "A convenient, nutrient-rich blend of roasted and ground black gram (urad dal) with other ingredients like rice, nuts, and spices, designed to make a healthy, fortifying porridge or pudding, often sweetened with palm jaggery, promoting bone strength, digestion, and energy, popular in South Indian diets, especially for women and growing children, and typically preservative-free.",
+    benefits: ["Bone strength", "Supports digestion", "Energy booster", "Preservative-free"],
+    moq: "100 units",
+    ingredients: "Roasted and ground black gram (urad dal), rice, nuts, and spices.",
+    directions: "Prepare as a porridge or pudding by cooking with water or milk. Add palm jaggery or natural sweetener as needed. Serve warm."
+  },
+  {
+    id: 15,
+    name: "MULTI GRAIN CHAPPATHI FLOUR",
+    weight: "500 g",
+    mrp: "₹190",
+    retailPrice: "₹160",
+    gst: "5%",
+    category: "Flour Mixes",
+    rating: 4.9,
+    shelfLife: "6 months",
+    image: image15,
+    icon: "🫓",
+    description: "Multigrain atta is a nutritious flour made from a blend of several whole grains, like wheat, oats, millets (jowar, bajra), barley, and sometimes lentils (chana dal) or maize, offering more fiber, protein, vitamins, and minerals than single-grain flour, making softer rotis and improving digestion. It's a popular, wholesome choice for healthier Indian flatbreads (chapatis/rotis) and adds diverse nutrients for better metabolism and overall health.",
+    benefits: ["Rich in fiber", "Protein rich", "Supports metabolism", "Makes softer rotis"],
+    moq: "100 units",
+    ingredients: "Whole Wheat, Finger Millet, Pearl Millet, White Sorghum, Yellow Maize, Green Gram, Black Channa.",
+    directions: "Mix KMD Multigrain Atta Flour with water and a little oil/salt to form a soft dough. Rest for 15 mins. Roll small portions into thin circles and cook on a hot tawa."
+  },
 ];
 
 export const categories = [
-  { name: "All Products", count: 12 },
-  { name: "Malt Products", count: 4 },
-  { name: "Flour Mixes", count: 5 },
-  { name: "Porridge Mixes", count: 2 },
+  { name: "All Products", count: 15 },
+  { name: "Malt Products", count: 5 },
+  { name: "Flour Mixes", count: 6 },
+  { name: "Porridge Mixes", count: 3 },
   { name: "Powder Mixes", count: 1 }
 ];
 
