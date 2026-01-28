@@ -51,7 +51,7 @@ const ProductCard = ({ product }) => {
               <img
                 src={product.image}
                 alt={product.name}
-                className={`w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 ${product.imageClass || ''}`}
+                className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
               />
             ) : (
               <div className={`text-6xl group-hover:scale-110 transition-transform duration-300 ${colorClass.iconBg} p-6 rounded-2xl`}>

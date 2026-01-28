@@ -286,7 +286,6 @@ export const products = [
     rating: 4.9,
     shelfLife: "6 months",
     image: image15,
-    imageClass: "mix-blend-screen",
     icon: "🫓",
     description: "Multigrain atta is a nutritious flour made from a blend of several whole grains, like wheat, oats, millets (jowar, bajra), barley, and sometimes lentils (chana dal) or maize, offering more fiber, protein, vitamins, and minerals than single-grain flour, making softer rotis and improving digestion. It's a popular, wholesome choice for healthier Indian flatbreads (chapatis/rotis) and adds diverse nutrients for better metabolism and overall health.",
     benefits: ["Rich in fiber", "Protein rich", "Supports metabolism", "Makes softer rotis"],
