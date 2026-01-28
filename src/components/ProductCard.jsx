@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const ProductCard = ({ product }) => {
   // Color assignment based on category
   const getColorClass = (category) => {
-    switch(category) {
+    switch (category) {
       case 'Malt Products':
         return {
           bg: 'bg-gradient-to-br from-blue-50 to-blue-100',
@@ -41,24 +41,24 @@ const ProductCard = ({ product }) => {
 
   return (
     <div className="group bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-      
+
       {/* Product Image */}
       <Link to={`/product/${product.id}`}>
         <div className="relative overflow-hidden cursor-pointer">
           <div className={`aspect-square ${colorClass.bg} ${colorClass.border} flex items-center justify-center p-4 relative`}>
             {/* Show actual product image if available, otherwise show icon */}
             {product.image ? (
-              <img 
-                src={product.image} 
+              <img
+                src={product.image}
                 alt={product.name}
-                className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                className={`w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 ${product.imageClass || ''}`}
               />
             ) : (
               <div className={`text-6xl group-hover:scale-110 transition-transform duration-300 ${colorClass.iconBg} p-6 rounded-2xl`}>
                 {product.icon}
               </div>
             )}
-            
+
             {/* KMD Logo Watermark */}
             <div className="absolute inset-0 flex items-center justify-center opacity-10">
               <div className="text-3xl font-bold">
@@ -68,7 +68,7 @@ const ProductCard = ({ product }) => {
               </div>
             </div>
           </div>
-          
+
           {/* Category & Tags */}
           <div className="absolute top-3 left-3 right-3 flex justify-between">
             <div className="bg-white px-3 py-1.5 rounded-lg shadow-sm">
@@ -76,14 +76,14 @@ const ProductCard = ({ product }) => {
                 {product.category}
               </span>
             </div>
-            
+
             {product.tag && (
               <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-3 py-1.5 rounded-lg shadow-sm">
                 <span className="text-xs font-bold">{product.tag}</span>
               </div>
             )}
           </div>
-          
+
           {/* Shelf Life Badge */}
           <div className="absolute bottom-3 right-3">
             <div className="bg-white px-3 py-1.5 rounded-lg shadow-sm flex items-center">
@@ -93,7 +93,7 @@ const ProductCard = ({ product }) => {
           </div>
         </div>
       </Link>
-      
+
       {/* Product Info */}
       <div className="p-6">
         {/* Product Name with KMD Logo */}
@@ -109,12 +109,12 @@ const ProductCard = ({ product }) => {
             </div>
           </div>
         </Link>
-        
+
         {/* Description */}
         <p className="text-gray-600 text-sm mb-4 line-clamp-2">
           {product.description}
         </p>
-        
+
         {/* Rating */}
         <div className="flex items-center mb-4">
           <div className="flex">
@@ -129,7 +129,7 @@ const ProductCard = ({ product }) => {
             {product.rating} (Export Quality)
           </span>
         </div>
-        
+
         {/* Price & Shelf Life */}
         <div className="flex items-center justify-between mb-6">
           <div className="text-right">
@@ -137,14 +137,14 @@ const ProductCard = ({ product }) => {
             <div className="text-sm text-gray-600">{product.shelfLife}</div>
           </div>
         </div>
-        
+
         {/* CTA Button */}
         <Link to={`/product/${product.id}`}>
           <button className="w-full py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-medium rounded-lg hover:shadow-md transition-all mb-4">
             View Details
           </button>
         </Link>
-        
+
         {/* Export Info with KMD Logo */}
         <div className="pt-4 border-t border-gray-100">
           <div className="flex items-center justify-between text-sm">
@@ -160,7 +160,7 @@ const ProductCard = ({ product }) => {
             </div>
           </div>
         </div>
-        
+
         {/* Quick Benefits */}
         {product.benefits && (
           <div className="mt-4 pt-4 border-t border-gray-100">
