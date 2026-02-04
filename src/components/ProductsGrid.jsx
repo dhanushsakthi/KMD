@@ -11,14 +11,14 @@ const ProductsGrid = () => {
     : products.filter(product => product.category === selectedCategory);
 
   // Get featured products (only show when viewing all products)
-  const featuredProducts = selectedCategory === 'All Products' 
+  const featuredProducts = selectedCategory === 'All Products'
     ? products.filter(product => product.featured).slice(0, 3)
     : [];
 
   return (
     <div className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-50 to-blue-100 px-4 py-2 rounded-full mb-6">
@@ -31,8 +31,11 @@ const ProductsGrid = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Carefully curated health food products meeting international quality standards
           </p>
+          <div className="mt-6 text-sm font-medium text-amber-700 bg-amber-50 inline-block px-4 py-2 rounded-lg border border-amber-200">
+            * All prices include GST 5% and courier charges (Tamilnadu only). <span className="underline italic cursor-help" title="Terms & Conditions apply">Conditions apply.</span>
+          </div>
         </div>
-        
+
         {/* Category Filter */}
         <div className="mb-12">
           <div className="flex items-center justify-between mb-6">
@@ -60,7 +63,7 @@ const ProductsGrid = () => {
             ))}
           </div>
         </div>
-        
+
         {/* Featured Products Section - ONLY when viewing All Products */}
         {selectedCategory === 'All Products' && featuredProducts.length > 0 && (
           <div className="mb-12">
@@ -74,8 +77,8 @@ const ProductsGrid = () => {
                   <div className="flex items-start gap-4">
                     <div className="w-20 h-20 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden">
                       {product.image ? (
-                        <img 
-                          src={product.image} 
+                        <img
+                          src={product.image}
                           alt={product.name}
                           className="w-full h-full object-contain p-2"
                         />
@@ -95,7 +98,7 @@ const ProductsGrid = () => {
                       <p className="text-sm text-gray-600 mb-3">{product.description.substring(0, 60)}...</p>
                       <div className="flex items-center justify-between">
                         <div>
-                          <span className="text-lg font-bold text-gray-900">{product.price}</span>
+                          <span className="text-lg font-bold text-gray-900">{product.retailPrice || product.price}</span>
                           <div className="text-xs text-gray-500">Shelf: {product.shelfLife}</div>
                         </div>
                         <button className="text-sm text-blue-600 hover:text-blue-800 font-medium">
@@ -109,7 +112,7 @@ const ProductsGrid = () => {
             </div>
           </div>
         )}
-        
+
         {/* Product Grid - All products */}
         <div className="mb-20">
           <div className="flex items-center justify-between mb-8">
@@ -145,7 +148,7 @@ const ProductsGrid = () => {
             </button>
           </div>
         )}
-        
+
         {/* Export Features */}
         <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl border border-gray-200 p-8 mb-16">
           <div className="text-center mb-10">
@@ -156,9 +159,9 @@ const ProductsGrid = () => {
               Premium quality health food products with seamless export experience
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
-            
+
             <div className="text-center p-6 bg-white rounded-xl border border-gray-100">
               <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-red-500 to-red-600 rounded-lg mb-6">
                 <Package className="w-7 h-7 text-white" />
@@ -166,7 +169,7 @@ const ProductsGrid = () => {
               <h4 className="text-lg font-bold text-gray-900 mb-3">Quality Packaging</h4>
               <p className="text-gray-600">ISO standard packaging for maximum freshness</p>
             </div>
-            
+
             <div className="text-center p-6 bg-white rounded-xl border border-gray-100">
               <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-lg mb-6">
                 <Truck className="w-7 h-7 text-white" />
@@ -233,7 +236,7 @@ const ProductsGrid = () => {
             </button>
           </div>
         </div>
-        
+
       </div>
     </div>
   );

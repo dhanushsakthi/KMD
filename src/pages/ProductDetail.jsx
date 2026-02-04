@@ -193,6 +193,9 @@ const ProductDetails = () => {
                 <div className="mt-2 text-sm text-gray-500">
                   <span className="font-medium">GST:</span> {product.gst || '5%'} included
                 </div>
+                <div className="mt-1 text-xs font-medium text-amber-700">
+                  * All prices include courier charges (Tamilnadu only). <span className="underline italic cursor-help" title="Terms & Conditions apply">Conditions apply.</span>
+                </div>
               </div>
             </div>
 

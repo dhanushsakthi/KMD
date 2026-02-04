@@ -117,9 +117,12 @@ const Products = () => {
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
             Premium Health Foods
           </h1>
-          <p className="text-xl text-amber-100 max-w-3xl mx-auto">
+          <p className="text-xl text-amber-100 max-w-3xl mx-auto mb-6">
             Discover our collection of specially crafted wellness products
           </p>
+          <div className="text-sm font-medium text-white/90 bg-white/10 backdrop-blur-sm inline-block px-4 py-2 rounded-lg border border-white/20">
+            * All prices include GST 5% and courier charges (Tamilnadu only). <span className="underline italic">Conditions apply.</span>
+          </div>
         </div>
       </div>
 
