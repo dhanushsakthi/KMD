@@ -19,7 +19,7 @@ async function runRegressionTests() {
         console.log('PASS: Title is correct.');
 
         // Check for Hero section (using a known element in Hero, e.g., h1 text)
-        const heroHeading = await driver.findElement(By.xpath("//h1[contains(text(), 'Taste the Tradition')]"));
+        const heroHeading = await driver.findElement(By.xpath("//h1[contains(text(), 'Bringing Authentic')]"));
         if (await heroHeading.isDisplayed()) {
             console.log('PASS: Hero section is visible.');
         } else {

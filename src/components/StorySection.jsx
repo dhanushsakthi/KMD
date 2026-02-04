@@ -5,7 +5,7 @@ const StorySection = () => {
   return (
     <div className="py-20 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-red-50 to-red-100 px-4 py-2 rounded-full mb-6">
@@ -17,10 +17,10 @@ const StorySection = () => {
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-red-500 mx-auto"></div>
         </div>
-        
+
         {/* Main Content */}
         <div className="grid lg:grid-cols-2 gap-12 mb-20">
-          
+
           {/* Left Column - Story */}
           <div>
             <div className="mb-10">
@@ -29,34 +29,34 @@ const StorySection = () => {
               </h3>
               <div className="space-y-6">
                 <p class="text-gray-700 leading-relaxed">
-  KMD Foods began as a small family-run initiative with a passion for bringing authentic Indian flavors to customers while preserving traditional values and quality craftsmanship.
-</p>
+                  KMD Foods began as a small family-run initiative with a passion for bringing authentic Indian flavors to customers while preserving traditional values and quality craftsmanship.
+                </p>
 
-<p class="text-gray-700 leading-relaxed">
-  Over time, the brand has grown through dedication, trust, and consistency, remaining focused on offering thoughtfully prepared products made with care and responsibility.
-</p>
+                <p class="text-gray-700 leading-relaxed">
+                  Over time, the brand has grown through dedication, trust, and consistency, remaining focused on offering thoughtfully prepared products made with care and responsibility.
+                </p>
 
-<p class="text-gray-700 leading-relaxed">
-  Every product is crafted using time-honored methods supported by modern technology, undergoing strict quality checks to ensure freshness, purity, and authenticity in every batch.
-</p>
+                <p class="text-gray-700 leading-relaxed">
+                  Every product is crafted using time-honored methods supported by modern technology, undergoing strict quality checks to ensure freshness, purity, and authenticity in every batch.
+                </p>
 
               </div>
             </div>
           </div>
-          
+
           {/* Right Column - Values */}
           <div className="space-y-6">
             {[
               {
                 icon: Globe,
                 title: 'Global Excellence',
-                description: 'Exporting premium quality to 50+ countries worldwide',
+                description: 'Exporting premium quality',
                 color: 'blue'
               },
               {
                 icon: Shield,
                 title: 'Quality Certified',
-                description: 'ISO, FSSAI, and international certifications',
+                description: 'FSSAI, and international certifications',
                 color: 'red'
               },
               {
@@ -86,7 +86,7 @@ const StorySection = () => {
             ))}
           </div>
         </div>
-        
+
         {/* Awards Section */}
         <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl border border-gray-200 p-8">
           <div className="text-center mb-10">
@@ -97,7 +97,7 @@ const StorySection = () => {
               Our commitment to excellence has been recognized globally
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
@@ -126,7 +126,7 @@ const StorySection = () => {
             ))}
           </div>
         </div>
-        
+
       </div>
     </div>
   );

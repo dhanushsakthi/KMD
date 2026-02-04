@@ -124,10 +124,6 @@ const Hero = () => {
             <p>Product Variants</p>
           </div>
           <div className="text-center">
-            <h3 className="text-4xl font-bold text-amber-300">25+</h3>
-            <p>Countries Served</p>
-          </div>
-          <div className="text-center">
             <h3 className="text-4xl font-bold text-amber-300">100%</h3>
             <p>Quality Assurance</p>
           </div>
